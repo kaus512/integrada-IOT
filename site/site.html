@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site Pessoal</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            background-image: url('https://img.freepik.com/vetores-gratis/fundo-azul-e-dourado-de-luxo_361591-2562.jpg?semt=ais_hybrid');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        .navbar {
+            background-color: #007BFF;
+        }
+        .tab-content {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            box-shadow: none;
+        }
+        .category-title {
+            text-align: center;
+            margin-top: 20px;
+            color: #FFFF00;
+        }
+        .card {
+            margin: 10px;
+            background-color: rgba(255, 255, 255, 0.5);
+            color: black;
+            transition: background-color 0.3s ease; /* Transição suave para as cartas */
+        }
+        .card:hover {
+            background-color: rgba(255, 255, 0, 0.5); /* Tom amarelado com transparência ao passar o mouse */
+        }
+        .card-deck {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .card {
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+        }
+        #loginModal .modal-content {
+            background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro do modal */
+            color: #fff; /* Cor branca do texto no modal */
+        }
+        /* Alterar cor do texto da introdução para preto */
+        #inicio p {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Modal de Login -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Acesso ao Site</h5>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="nome">Nome:</label>
+                            <input type="text" class="form-control" id="nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="senha">Senha:</label>
+                            <input type="password" class="form-control" id="senha" required>
+                        </div>
+                        <div class="alert alert-danger d-none" id="errorAlert">Preencha todos os campos e insira a senha correta.</div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="entrarButton">Entrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Meu Site Pessoal</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#inicio">Página Inicial</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#humanas">Ciências Humanas</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#natureza">Ciências da Natureza</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#linguagens">Linguagens e Códigos</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#matematica">Matemática</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#iot">IoT</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#pessoal">Página Pessoal</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid p-0 position-relative">
+        <div class="tab-content" id="content" style="display: none;">
+            <div id="inicio" class="tab-pane fade show active">
+                <h1 class="text-primary">Bem-vindo ao Meu Site Pessoal</h1>
+                <p class="lead">Este site é uma apresentação das áreas do saber que explorei durante meu ensino médio, onde pude aprofundar meus conhecimentos em diversas disciplinas, conectando a teoria com a prática. Cada página reflete uma jornada de aprendizado e desenvolvimento, desde conceitos fundamentais até a aplicação prática em projetos e atividades que me permitiram colocar em prática o que aprendi. Durante esse período, explorei áreas como Física, Química, Biologia, Matemática, IoT e outras, desenvolvendo habilidades que vão além da sala de aula e me prepararam para desafios futuros. Aqui, você encontrará uma visão abrangente dessas experiências, com exemplos práticos, reflexões e integrações interdisciplinares que mostram a riqueza e a diversidade do conhecimento adquirido.
+
+                </p>
+            </div>
+
+            <div id="humanas" class="tab-pane fade">
+                <h2 class="text-secondary category-title">Ciências Humanas</h2>
+                <div class="card-deck">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">História</h5>
+                            <p class="card-text">Descrição detalhada sobre História.</p>
+                          <button class="btn btn-info" data-toggle="collapse" data-target="#detalhesHistória">Ver Detalhes</button>
+                            <div id="detalhesHistória" class="collapse">
+                           <h6>Fotos:</h6>
+                                <img <h6>Fotos:</h6>
+<img src="sua iamgem" alt="Descrição da foto 1" class="img-fluid" style="max-width: 250px; height: auto;">
+<img src="sua iamgem" alt="Descrição da foto 2" class="img-fluid" style="max-width: 250px; height: auto;">
+
+<h6>Vídeos:</h6>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="seu video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allowfullscreen></iframe>
+</div>
+
+                                    Seu navegador não suporta a tag de vídeo.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Geografia</h5>
+                            <p class="card-text">Descrição detalhada sobre Geografia.</p>
+                          <button class="btn btn-info" data-toggle="collapse" data-target="#detalhesGeografia">Ver Detalhes</button>
+                            <div id="detalhesGeografia" class="collapse">
+                           <h6>Fotos:</h6>
+                                <img <h6>Fotos:</h6>
+<img src="sua iamgem" alt="Descrição da foto 1" class="img-fluid" style="max-width: 250px; height: auto;">
+<img src="sua iamgem" alt="Descrição da foto 2" class="img-fluid" style="max-width: 250px; height: auto;">
+
+<h6>Vídeos:</h6>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="seu video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allowfullscreen></iframe>
+</div>
+
+                                    Seu navegador não suporta a tag de vídeo.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Filosofia</h5>
+                            <p class="card-text">Descrição detalhada sobre Filosofia.</p>
+                          <button class="btn btn-info" data-toggle="collapse" data-target="#detalhesFilosofia">Ver Detalhes</button>
+                            <div id="detalhesFilosofia" class="collapse">
+                           <h6>Fotos:</h6>
+                                <img <h6>Fotos:</h6>
+<img src="sua iamgem" alt="Descrição da foto 1" class="img-fluid" style="max-width: 250px; height: auto;">
+<img src="sua iamgem" alt="Descrição da foto 2" class="img-fluid" style="max-width: 250px; height: auto;">
+
+<h6>Vídeos:</h6>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="seu video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allowfullscreen></iframe>
+</div>
+
+                                    Seu navegador não suporta a tag de vídeo.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Sociologia</h5>
+                            <p class="card-text">Descrição detalhada sobre Sociologia.</p>
+                     <button class="btn btn-info" data-toggle="collapse" data-target="#detalhesSociologia">Ver Detalhes</button>
+                            <div id="detalhesSociologia" class="collapse">
+                           <h6>Fotos:</h6>
+                                <img <h6>Fotos:</h6>
+<img src="sua iamgem" alt="Descrição da foto 1" class="img-fluid" style="max-width: 250px; height: auto;">
+<img src="sua iamgem" alt="Descrição da foto 2" class="img-fluid" style="max-width: 250px; height: auto;">
+
+<h6>Vídeos:</h6>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="seu video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allowfullscreen></iframe>
+</div>
+
+                                    Seu navegador não suporta a tag de vídeo.
+                                </video>
+                            </div>     
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="natureza" class="tab-pane fade">
+                <h2 class="text-secondary category-title">Ciências da Natureza</h2>
+                <div class="card-deck">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Biologia</h5>
+                            <p class="card-text">Descrição detalhada sobre Biologia.</p>
+                          <button class="btn btn-info" data-toggle="collapse" data-target="#detalhesBiologia">Ver Detalhes</button>
+                            <div id="detalhesBiologia" class="collapse">
+                                <h6>Livro de Plantas :</h6>
+                                <h6>Atividade Favorita:</h6>
+<p>Essa foi a atividade de Biologia que mais gostei, pois trouxe uma abordagem prática e diferente do habitual.</p>
+
+<h6>Exploração do Ambiente:</h6>
+<p>Tivemos a oportunidade de sair da sala de aula e explorar o ambiente do SENAC em busca de plantas. Durante essa atividade, registramos diversas espécies por meio de fotos e realizamos pesquisas para descobrir seus nomes populares, nomes científicos e o grupo biológico ao qual pertencem.</p>
+
+<h6>Aprendizado Prático:</h6>
+<p>Esse processo nos permitiu aprender de forma direta, observando as plantas em seus habitats e conectando o conhecimento teórico com a prática. A experiência de procurar as plantas, fotografá-las e investigar suas características ampliou minha visão sobre o tema de maneira significativa, tornando o aprendizado mais dinâmico e envolvente.</p>
+
+<h6>Contato com o Ambiente Externo:</h6>
+<p>Além disso, o contato com o ambiente externo, a interação com os colegas e o desafio de identificar cada espécie tornaram a atividade ainda mais marcante.</p>
+
+                                </p>
+                           <h6>Fotos:</h6>
+                                <h6>Foto 1:</h6>
+<img src="https://i.postimg.cc/qRHYvMsm/p1.png" alt="Descrição da foto 1" class="img-fluid" style="max-width: 250px; height: auto;">
+<h6>Foto 2:</h6>
+<img src="https://i.postimg.cc/BbrPdk91/p2.png" alt="Descrição da foto 2" class="img-fluid" style="max-width: 250px; height: auto;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Química</h5>
+                            <p class="card-text">Descrição detalhada sobre Química.</p>
+                          <button class="btn btn-info" data-toggle="collapse" data-target="#detalhesQuímica">Ver Detalhes</button>
+                            <div id="detalhesQuímica" class="collapse">
+                                <h6>Experiência Favorita:</h6>
+<p>Esse foi o experimento de Química que mais gostei, "Obtenção de um plástico (galalite) a partir de proteínas do leite".</p>
+
+<h6>Objetivo do Experimento:</h6>
+<p>O objetivo era produzir galalite, um polímero plástico natural, a partir da caseína presente no leite e utilizá-lo para construir modelos moleculares. O processo envolveu aquecer 200 mL de leite desnatado até 40°C, adicionar vinagre para coagular a caseína, filtrar a mistura e moldar o material antes de deixá-lo secar.</p>
+
+<h6>Materiais Utilizados:</h6>
+<p>Ao longo do experimento, utilizamos diversos materiais, como béquer, funil de Buchner, papel de filtro e termômetro, para garantir a eficiência do processo.</p>
+
+<h6>Observações:</h6>
+<p>Um dos pontos mais interessantes foi observar como a caseína se separou e se transformou em um material moldável, capaz de endurecer após secagem. Apesar de não utilizarmos formol, devido à sua toxicidade, o que limitou a dureza final do plástico, o processo foi fascinante.</p>
+
+<h6>Parte Prática:</h6>
+<p>A parte prática foi particularmente envolvente, pois além de acompanhar a formação do polímero, tivemos a oportunidade de modelar a galalite em formas que representassem moléculas, usando cores padronizadas para os átomos (preto para carbono, branco para hidrogênio, vermelho para oxigênio e azul para nitrogênio).</p>
+
+<h6>Conclusão:</h6>
+<p>A experiência foi não só educativa, mas também divertida, permitindo ver de perto como é possível criar polímeros a partir de recursos naturais. Essa combinação de ciência e criatividade fez deste o experimento mais marcante para mim.</p>
+
+                           <h6>Fotos:</h6>
+                                 <h6>Foto 1:</h6>
+<img src="https://i.postimg.cc/wB3gSdLf/IMG-20241002-WA0072.jpg" alt="Descrição da foto 1" class="img-fluid" style="max-width: 250px; height: auto;">
+<h6>Foto 2:</h6>
+<img src="https://i.postimg.cc/rsVhPqtz/IMG-20241002-WA0073.jpg" alt="Descrição da foto 2" class="img-fluid" style="max-width: 250px; height: auto;">
+
+<h6>Vídeos:</h6>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="https://www.youtube.com/embed/v_lIlPqNAos" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allowfullscreen></iframe>
+</div>
+
+                                    Seu navegador não suporta a tag de vídeo.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Física</h5>
+                            <p class="card-text">Descrição detalhada sobre Física.</p>
+                          <button class="btn btn-info" data-toggle="collapse" data-target="#detalhesFísica">Ver Detalhes</button>
+                            <div id="detalhesFísica" class="collapse">
+                                <h6>Trabalho Favorito:</h6>
+                                <p>Esse foi o trabalho de Física que mais gostei, principalmente por ser uma atividade integrada e por abordar um tema tão interessante e presente no cotidiano: os <strong>Princípios do Eletromagnetismo em Imagens Médicas</strong>.</p>
+                                
+                                <h6>Descrição da Atividade:</h6>
+                                <p>A atividade envolveu a compreensão de como uma corrente elétrica gera um campo magnético e como esse princípio é utilizado no exame de ressonância magnética. Durante o exame, um campo magnético de alta intensidade é criado, alinhando os átomos de hidrogênio do corpo ao campo. Depois, ondas de rádio são aplicadas, fazendo com que esses átomos se desalinhem e criem seus próprios campos magnéticos.</p>
+                                
+                                <h6>Funcionamento do Exame:</h6>
+                                <p>A máquina capta os sinais gerados por esse processo e os transforma em imagens detalhadas do corpo, permitindo uma visualização precisa do interior humano.</p>
+                                
+                                <h6>Aplicação dos Conceitos de Física:</h6>
+                                <p>O mais interessante foi ver como conceitos de Física, como o <strong>eletromagnetismo</strong>, a <strong>ressonância</strong> e o <strong>spin</strong> (movimento do núcleo do átomo em seu próprio eixo), se aplicam diretamente à Medicina.</p>
+                                
+                                <h6>Integração com Química:</h6>
+                                <p>O estudo dos átomos de hidrogênio, abundantes no corpo humano por causa da grande quantidade de água, e seu comportamento sob a influência de campos eletromagnéticos conectam o conteúdo de Física à Química.</p>
+                                
+                                <h6>Aspectos Técnicos:</h6>
+                                <p>Aprendemos também sobre a importância da sincronia com a frequência natural do material, essencial para amplificar a energia elétrica, e como o relaxamento dos átomos libera a energia necessária para gerar as imagens.</p>
+                                
+                                <h6>Conclusão:</h6>
+                                <p>Ver como esses conceitos abstratos da Física se traduzem em algo tão prático e útil foi o que tornou essa atividade tão marcante e envolvente para mim.</p>
+                                
+<h6>Vídeos:</h6>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="https://www.youtube.com/embed/N91t9Cpoj8w?si=p8Vr2A_xG8LkeUDx" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allowfullscreen></iframe>
+</div>
+
+                                    Seu navegador não suporta a tag de vídeo.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="linguagens" class="tab-pane fade">
+                <h2 class="text-secondary category-title">Linguagens e Códigos</h2>
+                <div class="card-deck">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Português</h5>
+                            <p class="card-text">Descrição detalhada sobre Português.</p>
+                          <button class="btn btn-info" data-toggle="collapse" data-target="#detalhesPortuguês">Ver Detalhes</button>
+                            <div id="detalhesPortuguês" class="collapse">
+                           <h6>Fotos:</h6>
+                                <img <h6>Fotos:</h6>
+<img src="sua iamgem" alt="Descrição da foto 1" class="img-fluid" style="max-width: 250px; height: auto;">
+<img src="sua iamgem" alt="Descrição da foto 2" class="img-fluid" style="max-width: 250px; height: auto;">
+
+<h6>Vídeos:</h6>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="seu video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allowfullscreen></iframe>
+</div>
+
+                                    Seu navegador não suporta a tag de vídeo.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Inglês</h5>
+                            <p class="card-text">Descrição detalhada sobre Inglês.</p>
+                          <button class="btn btn-info" data-toggle="collapse" data-target="#detalhesInglês">Ver Detalhes</button>
+                            <div id="detalhesInglês" class="collapse">
+                           <h6>Fotos:</h6>
+                                <img <h6>Fotos:</h6>
+<img src="sua iamgem" alt="Descrição da foto 1" class="img-fluid" style="max-width: 250px; height: auto;">
+<img src="sua iamgem" alt="Descrição da foto 2" class="img-fluid" style="max-width: 250px; height: auto;">
+
+<h6>Vídeos:</h6>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="seu video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allowfullscreen></iframe>
+</div>
+
+                                    Seu navegador não suporta a tag de vídeo.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Artes</h5>
+                            <p class="card-text">Descrição detalhada sobre Artes.</p>
+                          <button class="btn btn-info" data-toggle="collapse" data-target="#detalhesArtes">Ver Detalhes</button>
+                            <div id="detalhesArtes" class="collapse">
+                           <h6>Fotos:</h6>
+                                <img <h6>Fotos:</h6>
+<img src="sua iamgem" alt="Descrição da foto 1" class="img-fluid" style="max-width: 250px; height: auto;">
+<img src="sua iamgem" alt="Descrição da foto 2" class="img-fluid" style="max-width: 250px; height: auto;">
+
+<h6>Vídeos:</h6>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="seu video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allowfullscreen></iframe>
+</div>
+
+                                    Seu navegador não suporta a tag de vídeo.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Educação Física</h5>
+                            <p class="card-text">Descrição detalhada sobre Educação Física.</p>
+                          <button class="btn btn-info" data-toggle="collapse" data-target="#detalhesEducaçãoFísica">Ver Detalhes</button>
+                            <div id="detalhesEducaçãoFísica" class="collapse">
+                           <h6>Fotos:</h6>
+                                <img <h6>Fotos:</h6>
+<img src="sua iamgem" alt="Descrição da foto 1" class="img-fluid" style="max-width: 250px; height: auto;">
+<img src="sua iamgem" alt="Descrição da foto 2" class="img-fluid" style="max-width: 250px; height: auto;">
+
+<h6>Vídeos:</h6>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="seu video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allowfullscreen></iframe>
+</div>
+
+                                    Seu navegador não suporta a tag de vídeo.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="matematica" class="tab-pane fade">
+                <h2 class="text-secondary category-title">Matemática</h2>
+                <div class="card-deck">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Matemática</h5>
+                            <p class="card-text">Descrição detalhada sobre Matemática.</p>
+                          <button class="btn btn-info" data-toggle="collapse" data-target="#detalhesMatemática">Ver Detalhes</button>
+                            <div id="detalhesMatemática" class="collapse">
+                           <h6>Fotos:</h6>
+                                <img <h6>Fotos:</h6>
+<img src="sua iamgem" alt="Descrição da foto 1" class="img-fluid" style="max-width: 250px; height: auto;">
+<img src="sua iamgem" alt="Descrição da foto 2" class="img-fluid" style="max-width: 250px; height: auto;">
+
+<h6>Vídeos:</h6>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="seu video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allowfullscreen></iframe>
+</div>
+
+                                    Seu navegador não suporta a tag de vídeo.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Estatística</h5>
+                            <p class="card-text">Descrição detalhada sobre Estatística.</p>
+                          <button class="btn btn-info" data-toggle="collapse" data-target="#detalhesEstatística">Ver Detalhes</button>
+                            <div id="detalhesEstatística" class="collapse">
+                           <h6>Fotos:</h6>
+                                <img <h6>Fotos:</h6>
+<img src="sua iamgem" alt="Descrição da foto 1" class="img-fluid" style="max-width: 250px; height: auto;">
+<img src="sua iamgem" alt="Descrição da foto 2" class="img-fluid" style="max-width: 250px; height: auto;">
+
+<h6>Vídeos:</h6>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="seu video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allowfullscreen></iframe>
+</div>
+
+                                    Seu navegador não suporta a tag de vídeo.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="iot" class="tab-pane fade">
+                <h2 class="text-secondary category-title">IoT</h2>
+                <div class="card-deck">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Atividade do Boné</h5>
+                            <p class="card-text">Descrição da Atividade do Boné.</p>
+                          <button class="btn btn-info" data-toggle="collapse" data-target="#detalhesBoné">Ver Detalhes</button>
+                            <div id="detalhesBoné" class="collapse">
+                                <h6>Integrantes:</h6>
+                                <p>Andrei Rocha, Felipe Costa, Kauã Humberto e Mateus Kelm.</p>
+                                <h6>Título:</h6>
+                                <p>Sistema Inovador de Sensor de Ré em Boné.</p>
+                                <h6>Introdução:</h6>
+                                <p>Este relatório documenta o desenvolvimento de um sistema inovador integrado a um boné, projetado para funcionar como um sensor de ré...</p>
+                                <h6>Desenvolvimento do Projeto:</h6>
+                                <p><strong>Dia 1:</strong> No primeiro dia, a equipe focou no desenvolvimento do código...</p>
+                                <p><strong>Dia 2:</strong> O segundo dia trouxe desafios significativos...</p>
+                                <p><strong>Dia 3:</strong> No terceiro dia, a equipe superou os contratempos...</p>
+                                <h6>Integração com as Disciplinas:</h6>
+                                <ul>
+                                    <li><strong>Ciências da Natureza:</strong> Física, Química...</li>
+                                    <li><strong>Ciências Humanas:</strong> História, Geografia...</li>
+                                    <li><strong>Linguagem:</strong> Português, Inglês...</li>
+                                    <li><strong>Matemática:</strong> Cálculos para determinar distâncias...</li>
+                                </ul>
+                                <h6>Conclusão:</h6>
+                                <p>O projeto não apenas demonstrou a viabilidade técnica de integrar um sistema de detecção em um acessório cotidiano...</p>
+                                <h6>Fotos:</h6>
+                                 <h6>Foto 1:</h6>
+<img src="https://i.postimg.cc/gJLCkCVh/Imagem1.jpg" alt="Descrição da foto 1" class="img-fluid" style="max-width: 250px; height: auto;">
+<h6>Foto 2:</h6>
+<img src="https://i.postimg.cc/J7cTc7zn/Imagem2.jpg" alt="Descrição da foto 2" class="img-fluid" style="max-width: 250px; height: auto;">
+
+                            </div>
+                        </div>
+                      </div>
+                   <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Atividade do Carrinho Arduino</h5>
+                            <p class="card-text">Descrição da Atividade do Carrinho Arduino.</p>
+                          <button class="btn btn-info" data-toggle="collapse" data-target="#detalhesArduino">Ver Detalhes</button>
+                            <div id="detalhesArduino" class="collapse">
+                                <h6>Impressões sobre a Atividade:</h6>
+<p>Gostei muito de realizar essa atividade de IoT, pois foi uma ótima oportunidade de colocar em prática tudo o que aprendi ao longo do 3º bimestre.</p>
+
+<h6>Aplicação dos Conceitos:</h6>
+<p>Durante o desenvolvimento do carrinho seguidor de linha, pude integrar conceitos teóricos aprendidos nas aulas, como a utilização de sensores e a lógica de programação. O projeto permitiu que esses conhecimentos se materializassem em algo prático e funcional.</p>
+
+<h6>Desafios e Soluções:</h6>
+<p><strong>Montagem:</strong> A montagem do carrinho foi um processo desafiador, pois exigiu cuidado e precisão para garantir que todos os componentes estivessem corretamente conectados.</p>
+<p><strong>Programação:</strong> A criação do código em C++ foi outro ponto essencial. Precisei ajustar diversas vezes a programação para que o carrinho seguisse a linha da forma correta.</p>
+<p><strong>Testes:</strong> Durante os testes, percebemos que ajustes na sensibilidade dos sensores eram necessários, especialmente em curvas mais acentuadas, o que nos levou a fazer melhorias contínuas.</p>
+<h6>Conclusão:</h6>
+<p>Essa atividade foi extremamente enriquecedora, pois pude aplicar diversos conhecimentos teóricos em um projeto prático e ver como diferentes disciplinas se integram na resolução de problemas reais.</p>
+
+                           <h6>Fotos:</h6>
+                                 <h6>Foto 1:</h6>
+<img src="https://i.postimg.cc/RVkd1N17/c1.png" alt="Descrição da foto 1" class="img-fluid" style="max-width: 250px; height: auto;">
+<h6>Foto 2:</h6>
+<img src="https://i.postimg.cc/bJr1fhHY/C2.png" alt="Descrição da foto 2" class="img-fluid" style="max-width: 250px; height: auto;">
+
+<h6>Vídeos:</h6>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="https://www.youtube.com/embed/kHvrd8FqT0Q" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allowfullscreen></iframe>
+</div>
+
+                                    Seu navegador não suporta a tag de vídeo.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Atividade do 4º Bimestre</h5>
+                            <p class="card-text">Descrição da Atividade do 4º Bimestre.</p>
+                          <button class="btn btn-info" data-toggle="collapse" data-target="#detalhesBimestre">Ver Detalhes</button>
+                            <div id="detalhesBimestre" class="collapse">
+                           <h6>Fotos:</h6>
+                                <img <h6>Fotos:</h6>
+<img src="sua iamgem" alt="Descrição da foto 1" class="img-fluid" style="max-width: 250px; height: auto;">
+<img src="sua iamgem" alt="Descrição da foto 2" class="img-fluid" style="max-width: 250px; height: auto;">
+
+<h6>Vídeos:</h6>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="seu video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allowfullscreen></iframe>
+  
+</div>
+
+                                    Seu navegador não suporta a tag de vídeo.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Vídeo da Turma</h5>
+                            <p class="card-text">Descrição do Vídeo da Turma.</p>
+                          <button class="btn btn-info" data-toggle="collapse" data-target="#detalhesTurma">Ver Detalhes</button>
+                            <div id="detalhesTurma" class="collapse">
+                           <h6>Fotos:</h6>
+                                <img <h6>Fotos:</h6>
+<img src="sua iamgem" alt="Descrição da foto 1" class="img-fluid" style="max-width: 250px; height: auto;">
+<img src="sua iamgem" alt="Descrição da foto 2" class="img-fluid" style="max-width: 250px; height: auto;">
+
+<h6>Vídeos:</h6>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="seu video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allowfullscreen></iframe>
+</div>
+
+                                    Seu navegador não suporta a tag de vídeo.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Organização dos Armários de IoT</h5>
+                            <p class="card-text">Descrição da Organização dos Armários de IoT.</p>
+                          <button class="btn btn-info" data-toggle="collapse" data-target="#detalhesIoT">Ver Detalhes</button>
+                            <div id="detalhesIoT" class="collapse">
+                           <h6>Fotos:</h6>
+                                <img <h6>Fotos:</h6>
+<img src="sua iamgem" alt="Descrição da foto 1" class="img-fluid" style="max-width: 250px; height: auto;">
+<img src="sua iamgem" alt="Descrição da foto 2" class="img-fluid" style="max-width: 250px; height: auto;">
+
+<h6>Vídeos:</h6>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="seu video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allowfullscreen></iframe>
+</div>
+
+                                    Seu navegador não suporta a tag de vídeo.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="pessoal" class="tab-pane fade">
+                <h2 class="text-secondary category-title">Página Pessoal</h2>
+                <div class="card-deck">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Informações Pessoais</h5>
+                            <p class="card-text">Descrição das Informações Pessoais.</p>
+                          <button class="btn btn-info" data-toggle="collapse" data-target="#detalhesPessoal">Ver Detalhes</button>
+                            <div id="detalhesPessoal" class="collapse">
+                           <h6>Fotos:</h6>
+                                <img <h6>Fotos:</h6>
+<img src="sua iamgem" alt="Descrição da foto 1" class="img-fluid" style="max-width: 250px; height: auto;">
+<img src="sua iamgem" alt="Descrição da foto 2" class="img-fluid" style="max-width: 250px; height: auto;">
+
+<h6>Vídeos:</h6>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="seu video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allowfullscreen></iframe>
+</div>
+
+                                    Seu navegador não suporta a tag de vídeo.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Reflexão</h5>
+                            <p class="card-text">Descrição da Reflexão.</p>
+                          <button class="btn btn-info" data-toggle="collapse" data-target="#detalhesReflexão">Ver Detalhes</button>
+                            <div id="detalhesReflexão" class="collapse">
+                           <h6>Fotos:</h6>
+                                <img <h6>Fotos:</h6>
+<img src="sua iamgem" alt="Descrição da foto 1" class="img-fluid" style="max-width: 250px; height: auto;">
+<img src="sua iamgem" alt="Descrição da foto 2" class="img-fluid" style="max-width: 250px; height: auto;">
+
+<h6>Vídeos:</h6>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="seu video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allowfullscreen></iframe>
+</div>
+
+                                    Seu navegador não suporta a tag de vídeo.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Tarefas Favoritas</h5>
+                            <p class="card-text">Descrição das Tarefas Favoritas.</p>
+                          <button class="btn btn-info" data-toggle="collapse" data-target="#detalhesFavoritas">Ver Detalhes</button>
+                            <div id="detalhesFavoritas" class="collapse">
+                           <h6>Fotos:</h6>
+                                <h6>Foto 1:</h6>
+<img src="sua iamgem" alt="Descrição da foto 1" class="img-fluid" style="max-width: 250px; height: auto;">
+<h6>Foto 2:</h6>
+<img src="sua iamgem" alt="Descrição da foto 2" class="img-fluid" style="max-width: 250px; height: auto;">
+
+<h6>Vídeos:</h6>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="seu video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allowfullscreen></iframe>
+</div>
+
+                                    Seu navegador não suporta a tag de vídeo.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Exibe o modal de login ao carregar a página
+            $('#loginModal').modal('show');
+
+            $('#entrarButton').click(function() {
+                var nome = $('#nome').val().trim();
+                var senha = $('#senha').val().trim();
+
+                // Validação do login
+                if (nome === "" || senha === "" || senha !== "123") {
+                    $('#errorAlert').removeClass('d-none'); // Exibe a mensagem de erro
+                } else {
+                    $('#errorAlert').addClass('d-none'); // Oculta a mensagem de erro
+                    $('#loginModal').modal('hide'); // Fecha o modal
+                    $('#content').show(); // Exibe o conteúdo do site
+                }
+            });
+        });
+    </script>
+</body>
+</html>
