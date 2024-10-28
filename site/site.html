@@ -16,7 +16,7 @@
             overflow-x: hidden;
         }
         .navbar {
-            background-color: #4b0ebb;
+            background-color: #001aff;
         }
         .tab-content {
             padding: 20px;
@@ -668,7 +668,14 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function() { 
+            $(document).ready(function() {
+            $('.nav-link').on('click', function() {
+                $('.tab-pane').removeClass('show active');
+                const target = $(this).attr('href');
+                $(target).addClass('show active');
+            });
+        });
             // Exibe o modal de login ao carregar a página
             $('#loginModal').modal('show');
 
